@@ -1,0 +1,42 @@
+.profile-card {
+    display: flex;
+    width: 90%;
+    margin: 50px auto;
+    justify-content: space-around;
+}
+
+.profile-card-image-div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card-image-div img{
+    width: 100%;
+    aspect-ratio: 3/2
+}
+
+.profile-card-contents-div {
+    width: 45%;
+}
+
+@media screen and (max-width: 768px) {
+    .profile-card {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .profile-card-image-div {
+        width: 100%
+    }
+
+    .profile-card-image-div img{
+        aspect-ratio: 4/2
+    }
+
+    .profile-card-contents-div {
+        width: 100%;
+    }
+    
+}

@@ -1,0 +1,42 @@
+.card {
+    margin: 50px auto;
+    min-height: 300px;
+}
+
+.card-contents-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+}
+
+.card-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+    height: 100%;
+    width: 45%;
+    margin: 0 auto;
+}
+
+.empty-content {
+    width: 45%;
+}
+
+.card-contents p {
+    margin: 0;
+}
+
+
+@media screen and (max-width: 950px) {
+    .empty-content {
+        display: none;
+    }
+
+    .card-contents {
+        width: 90%;
+    }
+}

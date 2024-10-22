@@ -1,0 +1,27 @@
+.small-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;    
+}
+
+.small-card-image-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.small-card-image-div img {
+    width: 50px;
+    aspect-ratio: 1/1;
+}
+
+.small-card-content-div {
+    width: 65%;
+}
+
+@media screen and (max-width: 650px) {
+    .small-card-image-div {
+        width: 25%;
+    }    
+}

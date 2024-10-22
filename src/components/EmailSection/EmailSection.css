@@ -1,0 +1,81 @@
+.email-section {
+    width: 90%;
+    margin: 20px 0;
+    border: solid .5px #cb9565;
+}
+
+.email-section-name-email {
+    display: flex;
+    border-bottom: #cb9565 solid .5px;
+    height: 50px;
+}
+
+.email-section-name-input {
+    width: 50%;
+    border: none;
+    background-color: transparent;
+}
+
+.email-section-email-input {
+    width: 50%;
+    border: none;
+    background-color: transparent;
+}
+
+.email-section-vertical-divider {
+    border-left: #cb9565 solid .5px;
+}
+
+.email-section-subject {
+    height: 50px;
+    border-bottom: #cb9565 solid .5px;
+}
+
+.email-section-subject-input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.email-section-text-area {
+    border-bottom: #cb9565 solid .5px;
+}
+
+.email-section-text-area-input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.email-section-send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;   
+}
+
+.email-section-send-button {
+    width: 100%;
+    height: 100%;
+    text-align: start;
+    background-color: transparent;
+    border: none;
+    color: gray;
+}
+
+.email-section-send-button:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .email-section-name-email {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100px;
+    }
+
+    .email-section-vertical-divider {
+        border-top: #cb9565 solid .5px;
+    }
+}

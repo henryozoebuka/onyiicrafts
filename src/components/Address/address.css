@@ -1,0 +1,64 @@
+.address {
+    position: absolute;
+    width: 300px;
+    top: 10%;
+    left: 5%;
+    border: solid 1px #cb9565;
+    background-color: #ffffff;
+}
+
+.address-title-p1 {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.address-title-p2 {
+    font-size: 0.85rem;
+}
+
+.address-directions {
+    width: 90%;
+    margin: auto;
+}
+
+.address-directions > a {
+    display: flex;
+    text-decoration: none;
+    color: #cb9565;
+    font-size: 0.85rem;
+}
+
+.address-directions svg {
+    width: 18px;
+    aspect-ratio: 1/1;
+    fill: #cb9565;
+    padding-right: 3px;    
+}
+
+.address-directions a:hover {
+    color: #000000;
+}
+
+.address-directions a:hover svg {
+    fill: #000000; 
+}
+
+.address-image img {
+    width: 100%;
+}
+
+.address-text-contents {
+    width: 90%;
+    margin: auto;
+}
+
+.address-divider {
+    width: 100%;
+    border-top: solid 1px #cb9565;
+}
+
+@media screen and (max-width: 350px) {
+    .address {
+        width: 90%;
+    }
+}

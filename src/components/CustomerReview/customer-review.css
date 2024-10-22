@@ -1,0 +1,16 @@
+.customer-review {
+    min-width: 100%;
+}
+
+.invited-comma {
+    color: #cb9565;
+    font-size: 100px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+}
+
+.customer-review-contents-title {
+    color: #cb9565;
+    font-size: 30px;
+    margin: 0;
+}

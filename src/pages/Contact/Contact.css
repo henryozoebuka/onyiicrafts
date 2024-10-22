@@ -1,0 +1,21 @@
+.contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
+.contact-wrapper {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 700px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+}

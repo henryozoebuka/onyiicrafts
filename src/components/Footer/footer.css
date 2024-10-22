@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 2rem;
+}
+
+.footer-text {
+    font-size: .9rem;
+}
+
+.footer-svgs {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-svgs svg {
+    fill:#cb9565;
+    width: 20px;
+    aspect-ratio: 1/1;
+}
+
+.footer-svgs a:hover svg {
+    fill: #000000;
+}

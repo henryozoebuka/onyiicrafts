@@ -1,0 +1,13 @@
+.small-cards {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 50px auto;
+}
+
+@media screen and (max-width: 650px) {    
+    .small-cards {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}

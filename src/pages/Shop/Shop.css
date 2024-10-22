@@ -1,0 +1,44 @@
+.shop {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.shop-contents {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.shop-sidebar {
+    width: 25%;
+}
+
+.shop-cart-p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.featured-products-p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 400px) {
+    .shop {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .shop-contents {
+        margin: auto;
+        width: 90%;
+    }
+
+    .shop-sidebar {
+        width: 90%;
+        margin: auto;
+    }
+}
