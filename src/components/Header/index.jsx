@@ -6,7 +6,9 @@ import './header.css';
 import { Link } from "react-router-dom";
 
 const Header = () => {
-    const [menuIcon, setMenuIcon] = useState(false); // Start with menu closed
+    const [menuIcon, setMenuIcon] = useState(false);
+    const [scrollPercentage, setScrollPercentage] = useState(0)
+
     const navLinks = ['Home', 'Contact', 'Shop'];
 
     const outsideClick = (event) => {
@@ -16,6 +18,13 @@ const Header = () => {
         }
     };
 
+    const handleScroll = () => {
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight
+        const scrolledHeight = window.scrollY
+        const scrolledHeightPercentage = (scrolledHeight / totalHeight) * 100
+        setScrollPercentage(scrolledHeightPercentage)
+    }
+
     useEffect(() => {
         document.addEventListener('click', outsideClick)
         // Cleanup function
@@ -23,6 +32,14 @@ const Header = () => {
             document.removeEventListener('click', outsideClick);
         };
     }, [menuIcon]);
+
+    useEffect(() => {
+        document.addEventListener('scroll', handleScroll);
+
+        return () => {
+            document.removeEventListener('scroll', handleScroll);
+        }
+    })
 
     const toggleMenuIcon = () => {
         setMenuIcon(!menuIcon);
@@ -44,7 +61,10 @@ const Header = () => {
                     <img src={menuIcon ? menuIconClose : menuIconOpen} alt="Menu Icon" className="menu-icon" />
                 </div>
             </div>
-            
+            <div className="scroll-indicator-wrapper">
+                <div className="scroll-indicator" style={{width: `${scrollPercentage}%`}}></div>
+            </div>
+
             {menuIcon && (
                 <ul className="nav-links-mobile">
                     {navLinks.map((link, index) => (

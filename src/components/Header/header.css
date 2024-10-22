@@ -72,6 +72,20 @@
     width: 30px;
 }
 
+.scroll-indicator-wrapper {
+    position: fixed;
+    top: 75px;
+    height: 5px;
+    width: 100%;
+    z-index: 3;
+    background-color: #ffffff;
+}
+
+.scroll-indicator {
+    height: 100%;
+    background-color: #cb9565;
+}
+
 @media screen and (max-width: 768px) {
     .menu-icon-div {
         display: block;

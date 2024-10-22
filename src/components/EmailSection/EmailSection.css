@@ -13,12 +13,14 @@
 .email-section-name-input {
     width: 50%;
     border: none;
+    outline: none;
     background-color: transparent;
 }
 
 .email-section-email-input {
     width: 50%;
     border: none;
+    outline: none;
     background-color: transparent;
 }
 
@@ -29,12 +31,14 @@
 .email-section-subject {
     height: 50px;
     border-bottom: #cb9565 solid .5px;
+    display: flex;
 }
 
 .email-section-subject-input {
     background-color: transparent;
     border: none;
     outline: none;
+    align-self: center;
 }
 
 .email-section-text-area {
@@ -71,7 +75,7 @@
 @media screen and (max-width: 500px) {
     .email-section-name-email {
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         height: 100px;
     }
 
