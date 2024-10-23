@@ -9,6 +9,7 @@
 .slide img {
     width: 50%;
     max-height: 300px;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.5)
 }
 
 .contents {

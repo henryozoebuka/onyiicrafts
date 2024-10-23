@@ -26,7 +26,8 @@
     width: 90%;
     background-color: #ffffff;
     justify-content: space-between;
-    height: max-content;
+    height: 70%;
+    overflow: hidden;
 }
 
 .product-view-images-section {

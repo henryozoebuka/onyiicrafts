@@ -9,7 +9,7 @@ const Header = () => {
     const [menuIcon, setMenuIcon] = useState(false);
     const [scrollPercentage, setScrollPercentage] = useState(0)
 
-    const navLinks = ['Home', 'Contact', 'Shop'];
+    const navLinks = ['Home', 'Contact', 'Shop', 'StaffLogin', 'SignUp'];
 
     const outsideClick = (event) => {
         // Correctly access the ref's current value

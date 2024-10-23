@@ -1,6 +1,7 @@
 .product {
     width: 100%;
     cursor: pointer;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.5)
 }
 
 .image-div {
@@ -23,6 +24,7 @@
     align-items: center;
     text-align: center;
     height: 40px;
+    text-transform: capitalize;
 }
 
 .product-contents {

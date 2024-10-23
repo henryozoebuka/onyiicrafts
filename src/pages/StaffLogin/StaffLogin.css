@@ -1,0 +1,52 @@
+.staff-area {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.staff-area-title {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.staff-area-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.staff-area-wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.staff-area-username-input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    outline: none;
+    border: solid .5px #cb9565;
+}
+
+.staff-area-password-input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    outline: none;
+    border: solid .5px #cb9565;
+}
+
+.staff-area-submit-input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    outline: none;
+    border: solid .5px #cb9565;
+    background-color: #cb9565;
+}
