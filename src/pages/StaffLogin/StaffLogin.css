@@ -50,3 +50,7 @@
     border: solid .5px #cb9565;
     background-color: #cb9565;
 }
+
+.staff-area-submit-input:hover {
+    cursor: pointer;
+}

@@ -25,9 +25,14 @@ const SignUp = () => {
           phoneNumber: '',
           gender: ''
         })
-      }
+      } 
 
     } catch (error) {
+      if (error.response) {
+        if (error.response.status === 400) {
+          alert(error.response.data.message)
+        }
+      }
       console.error('An error occurred while signing up: ', error)
     }
   }

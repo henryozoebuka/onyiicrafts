@@ -13,7 +13,6 @@ const CustomerReviews = ({ image }) => {
         } else {
             setReviewCount(0)
         }
-        console.log(reviewCount)
     }
 
     const previousSlide = () => {
@@ -22,7 +21,6 @@ const CustomerReviews = ({ image }) => {
         } else {
             setReviewCount(prevCount => prevCount = customerReviews.length - 1)
         }
-        console.log(reviewCount)
     }
 
 

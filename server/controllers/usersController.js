@@ -12,9 +12,9 @@ const createUser = async (req, res) => {
         }
 
         //check if user exists
-        const existingUser = await UserModel.findOne({username})
+        const existingUser = await UserModel.findOne({ username })
         if (existingUser) {
-            return res.status(409).json({message: 'Username already exists. Try another one.'})
+            return res.status(409).json({ message: 'Username already exists. Try another one.' })
         }
 
 
@@ -28,15 +28,39 @@ const createUser = async (req, res) => {
             ...req.body,
             password: hashedPassword
         })
-        if (user) {
-            return res.status(201).json({message: `${user.username} created successfully.`})
-        } else {
-            return res.status(501).json({ message: 'Something went wrong while creating your account. Try again later.' })
-        }
+
+        return res.status(201).json({ message: `${user.username} created successfully.` })
+
     } catch (error) {
         console.error('Error occurred while creating your account: ', error)
         res.status(500).json({ message: 'Failed to create user' })
     }
 }
 
-export {createUser}
+
+//user login
+
+const userLogin = async (req, res) => {
+    const { username, password } = req.body
+    try {
+        if (!username || !password) {
+            return res.status(400).json({ message: 'All fields are required.' })
+        }
+        const user = await UserModel.findOne({ username })
+        if (!user) {
+            return res.status(404).json({ message: 'User does not exist' })
+        }
+        const checkPassword = await bcrypt.compare(password, user.password)
+        if (!checkPassword) {
+            return res.status(401).json({ message: 'Incorrect password.' })
+        }
+        const {password: _, ...userData} = user.toObject()
+        res.status(200).json({ user: userData })
+
+    } catch (error) {
+        console.error('This error occurred while logging in: ', error)
+        return res.status(500).json({ message: 'An error occurred while signing in to your account.' })
+    }
+}
+
+export { createUser, userLogin }
