@@ -32,10 +32,23 @@ const userSchema = mongoose.Schema({
         required: true
     },
 
+    email: {
+        type: String
+    },
+
     role: {
         type: String,
         default: 'user'
     },
+
+    approvalCode: {
+        type: String,
+    },
+    
+    status: {
+        type: String,
+        default: 'inactive'
+    }
 })
 
 const UserModel = mongoose.model('User', userSchema)

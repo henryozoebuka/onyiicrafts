@@ -1,9 +1,11 @@
 .staff-area {
     width: 100%;
-    margin-top: 50px;
+    max-width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 50px auto;
+    box-shadow: 2px 2px 5px #cb9565;
 }
 
 .staff-area-title {
@@ -53,4 +55,21 @@
 
 .staff-area-submit-input:hover {
     cursor: pointer;
+}
+
+.staff-area-new-staff {
+    justify-self: flex-start;
+    align-self: center;
+    width: 100%;
+}
+
+.staff-area-new-staff a {
+    text-decoration: none;
+    color: #cb9565;
+    justify-self: flex-start;
+    align-self: center;
+}
+
+.staff-area-new-staff a:hover{
+    font-weight: bold;
 }

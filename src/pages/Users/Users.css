@@ -1,0 +1,147 @@
+.users {
+    width: 100%;
+}
+
+.users-wrapper {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.users-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 2px #cb9565;
+}
+
+
+.users-user:hover {
+    cursor: pointer;
+}
+
+.users-user-info {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.users-user-info p {
+    width: 45%;
+    margin: auto 0 auto 5px;
+}
+
+.users-delete-button-div {
+    height: 45px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.users-delete-button-div button {
+    width: 90%;
+    box-shadow: 2px 2px 3px #cb9565;
+    border-radius: 10px;
+    height: 80%;
+    border: none;
+}
+
+
+.users-delete-button-div button:hover {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.users-user-info-divider {
+    border-left: dotted .5px #cb9565;
+    height: 40px;
+    margin: auto;
+}
+
+
+.users-user-delete-warning {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.users-user-delete-warning_wrapper {
+    width: 90%;
+    height: 200px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 3px 3px 5px #cb9565;
+    border-radius: 10px;
+}
+
+.users-user-delete-warning-buttons {
+    width: 100%;
+    display: flex;
+}
+
+.user-delete-warning-button {
+    width: 40%;
+    height: 50px;
+    box-shadow: 3px 3px 5px #cb9565;
+    border: none;
+    background-color: transparent;
+    margin: 20px auto;
+}
+
+.user-delete-warning-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 400px) {
+    .users-user-info {
+        flex-direction: column;
+    }   
+
+    .users-user-info-divider {
+        display: none;
+    }
+
+    .users-user-info p {
+        width: fit-content;
+        margin: 5px 0 5px 5px;
+    }
+
+    .users-delete-button-div {
+        width: 100px;
+    }
+
+    .users-user-delete-warning_wrapper {
+        height: 50%;
+    }
+
+    .users-user-delete-warning-buttons {
+        flex-direction: column;
+    }
+
+    .user-delete-warning-button {
+        width: 85%;
+        margin-bottom: 0;
+    }
+    
+}
+
+@media screen and (max-width: 260px) {
+    .user-delete-warning-button {
+        width: 90%;}
+}

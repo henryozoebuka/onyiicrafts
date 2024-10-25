@@ -4,6 +4,8 @@ import Footer from './components/Footer/index.jsx';
 import Header from './components/Header/index.jsx';
 import Home from './pages/Home/Home.js'
 import Shop from './pages/Shop/Shop.js'
+import User from './pages/User/User.js'
+import Users from './pages/Users/Users.js'
 import Contact from './pages/Contact/Contact.js'
 import StaffLogin from './pages/StaffLogin/StaffLogin.js'
 import SignUp from './pages/SignUp/SignUp.js'
@@ -34,6 +36,8 @@ function App() {
                 <Route path='/Contact' element={<Contact />} />
                 <Route path='/StaffLogin' element={<StaffLogin />} />
                 <Route path='/SignUp' element={<SignUp />} />
+                <Route path='/User' element={<User />} />
+                <Route path='/Users' element={<Users />} />
                 {/* <Route path="/details" element={<Details />} /> */}
             </Routes>
             <Footer />

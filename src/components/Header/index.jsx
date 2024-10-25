@@ -9,7 +9,7 @@ const Header = () => {
     const [menuIcon, setMenuIcon] = useState(false);
     const [scrollPercentage, setScrollPercentage] = useState(0)
 
-    const navLinks = ['Home', 'Contact', 'Shop', 'StaffLogin', 'SignUp'];
+    const navLinks = ['Home', 'Contact', 'Shop', 'Staff Area', 'User', 'Users'];
 
     const outsideClick = (event) => {
         // Correctly access the ref's current value
@@ -52,7 +52,7 @@ const Header = () => {
                 <ul className="nav-links">
                     {navLinks.map((link, index) => (
                         <li className="link" key={index}>
-                            <Link to={`/${link === 'Home' ? '' : link}`}>{link}</Link>
+                            <Link to={`/${link === 'Home' ? '' : link === 'Staff Area' ? 'StaffLogin' : link}`}>{link}</Link>
                         </li>
                     ))}
                 </ul>
@@ -69,7 +69,7 @@ const Header = () => {
                 <ul className="nav-links-mobile">
                     {navLinks.map((link, index) => (
                         <li className="link" key={index}>
-                            <Link to={`/${link === 'Home' ? '' : link}`}>{link}</Link>
+                            <Link to={`/${link === 'Home' ? '' : link === 'Staff Area' ? 'StaffLogin' : link}`}>{link}</Link>
                         </li>
                     ))}
                 </ul>

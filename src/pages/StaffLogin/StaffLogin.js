@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 import { setLoggedIn } from '../../redux/slices/loggedInSlice.js'
 import { setUser } from '../../redux/slices/userSlice.js'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const StaffArea = () => {
     const {serverURL} = useSelector(state => state.serverURL)
@@ -50,10 +50,11 @@ const StaffArea = () => {
         <div className='staff-area-wrapper'>
             <p className='staff-area-title'>staff login</p>
             <form onSubmit={handleSubmit} className='staff-area-form'>
-                    <input type='text' onChange={handleChange} name='username' value={loginData.username} placeholder='Username' className='staff-area-username-input'/>
+                    <input type='text' onChange={handleChange} name='username' value={loginData.username} placeholder='Username or email' className='staff-area-username-input'/>
                     <input type='password' onChange={handleChange} name='password' value={loginData.password} placeholder='Password' className='staff-area-password-input'/>
                     <input type='submit' className='staff-area-submit-input'/>
             </form>
+            <p className='staff-area-new-staff'>A new staff? <Link to={'/SignUp'}>Click here</Link> to sign up</p>
         </div>
     </div>
   )
