@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './StaffLogin.css'
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
@@ -12,7 +12,7 @@ const StaffArea = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [loginData, setLoginData] = useState({})
-
+    const [staff, setStaff] = useState(false)
 
     //handle change
     const handleChange = (e) => {
@@ -45,6 +45,17 @@ const StaffArea = () => {
         }
     }
 
+    //toggle between customer and staff
+    const toggleToStaff = () => {
+        setStaff(true)
+    }
+
+    const toggleToCustomer = () => {
+        setStaff(false)
+    }
+
+    useEffect(()=>{}, [staff])
+
   return (
     <div className='staff-area'>
         <div className='staff-area-wrapper'>
@@ -54,7 +65,11 @@ const StaffArea = () => {
                     <input type='password' onChange={handleChange} name='password' value={loginData.password} placeholder='Password' className='staff-area-password-input'/>
                     <input type='submit' className='staff-area-submit-input'/>
             </form>
-            <p className='staff-area-new-staff'>A new staff? <Link to={'/SignUp'}>Click here</Link> to sign up</p>
+            <div className='staff-or-customer' style={{}}>
+                <div className='customer' onClick={()=>{toggleToCustomer()}} style={!staff ? {backgroundColor: "#cb9565"} : {}} ><p>Customer</p></div>
+                <div className='staff' onClick={()=>{toggleToStaff()}} style={staff ? {backgroundColor: "#cb9565"} : {}}><p>Staff</p></div>
+            </div>
+            <p className='staff-area-new-staff'>A new user? <Link to={'/SignUp'}>Click here</Link> to sign up</p>
         </div>
     </div>
   )

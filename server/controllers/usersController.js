@@ -78,7 +78,7 @@ const fetchUser = async (req, res) => {
             return res.status(404).json({ message: 'User not found.' });
         }
         const { password, ...userData } = user.toObject()
-        res.status(200).json({ user: userData })
+        res.status(200).json(userData)
     } catch (error) {
         console.error('An error occurred while fetching user: ', error)
         res.status(500).json({ message: 'Something went wrong while fetching user.' })

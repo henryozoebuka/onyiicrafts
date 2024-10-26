@@ -73,3 +73,33 @@
 .staff-area-new-staff a:hover{
     font-weight: bold;
 }
+
+.staff-or-customer {
+    border: dotted 1px #cb9565;
+    height: 30px;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.customer {
+    width: 45%;
+    height: 70%;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.staff {
+    width: 45%;
+    height: 70%;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

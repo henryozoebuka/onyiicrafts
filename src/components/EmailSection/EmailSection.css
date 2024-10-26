@@ -2,6 +2,7 @@
     width: 90%;
     margin: 20px 0;
     border: solid .5px #cb9565;
+    box-shadow: 2px 2px 5px #cb9565;
 }
 
 .email-section-name-email {

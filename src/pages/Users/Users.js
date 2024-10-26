@@ -3,12 +3,14 @@ import './Users.css'
 import axios from 'axios'
 import { setUsers } from '../../redux/slices/userSlice.js'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 const Users = () => {
     const { serverURL } = useSelector(state => state.serverURL)
     const { users } = useSelector(state => state.users)
     const dispatch = useDispatch()
     const [deleteUserWarning, setDeleteUserWarning] = useState(false)
+    const navigate = useNavigate()
 
     //delete user
     const deleteUser = async (userId) => {
@@ -30,6 +32,7 @@ const Users = () => {
         }
     }
 
+    //toggle delete user modal
     const toggleDeleteUser = () => {
         setDeleteUserWarning(!deleteUserWarning)
     }
@@ -71,7 +74,7 @@ const Users = () => {
                                         </div>
                                     </div>
                                 </div>}
-                            <div className='users-user-info'>
+                            <div className='users-user-info' onClick={()=>{navigate(`/AdminUser/${user._id}`)}}>
                                 <p>{user.firstname}</p>
                                 <div className='users-user-info-divider'></div>
                                 <p>{user.lastname}</p>

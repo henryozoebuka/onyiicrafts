@@ -4,6 +4,10 @@
     box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.5)
 }
 
+.product:hover {
+    transform: scale(1.03);
+}
+
 .image-div {
     display: flex;
     align-items: center;
@@ -11,10 +15,14 @@
 }
 
 .image-div img {
+    margin-top: 5px;
     width: 60%;
 }
 
 .contents-wrapper {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 5px;
     border: solid 1px #cb9565;
 }
 

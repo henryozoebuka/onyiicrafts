@@ -4,7 +4,7 @@ const usersRouter = express.Router()
 
 usersRouter.post('/createUser', createUser)
 usersRouter.post('/userLogin', userLogin)
-usersRouter.get('/fetchUser', fetchUser)
+usersRouter.get('/fetchUser/:id', fetchUser)
 usersRouter.get('/fetchUsers', fetchusers)
 usersRouter.delete('/deleteUser/:id', deleteUser)
 
